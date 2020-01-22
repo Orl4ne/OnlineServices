@@ -20,7 +20,7 @@ namespace OnlineServices.WebUx.Mvc6.Areas.Facilities.Controllers
         // GET: Incident
         public ActionResult Index()
         {
-            return View();
+            return View("Create");
         }
 
         // GET: Incident/Details/5
