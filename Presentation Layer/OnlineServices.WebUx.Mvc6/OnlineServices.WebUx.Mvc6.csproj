@@ -33,9 +33,7 @@
     <Folder Include="Areas\Assessments\Models\" />
     <Folder Include="Areas\Attendances\Controllers\" />
     <Folder Include="Areas\Attendances\Data\" />
-    <Folder Include="Areas\Attendances\Models\" />
     <Folder Include="Areas\Facilities\Data\" />
-    <Folder Include="Areas\Facilities\Models\" />
     <Folder Include="Areas\Meals\Controllers\" />
     <Folder Include="Areas\Meals\Data\" />
     <Folder Include="Areas\Meals\Models\" />

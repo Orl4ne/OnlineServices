@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using OnlineServices.Common.FacilityServices.Interfaces;
 using OnlineServices.Common.FacilityServices.TransfertObjects;
 using OnlineServices.Common.TranslationServices.TransfertObjects;
+using OnlineServices.WebUx.Mvc6.Areas.Facilities.Models;
 
 namespace OnlineServices.WebUx.Mvc6.Areas.Facilities.Controllers
 {
+    [Area("Facilities")]
     public class AttendeeController : Controller
     {
         private readonly IFSAttendeeRole attendeeRole;
@@ -19,8 +21,14 @@ namespace OnlineServices.WebUx.Mvc6.Areas.Facilities.Controllers
         }
 
         //Get Formulaire vide
+        [HttpGet]
         public IActionResult IncidentReporting()
         {
+            var temp = new ExampleVM()
+            {
+                A = 1,
+                B = 2
+            };
             return View();
         }
 
@@ -35,7 +43,7 @@ namespace OnlineServices.WebUx.Mvc6.Areas.Facilities.Controllers
         //Submit Formlulaire
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult IncidentReportingSubmited(IncidentTO incidentTO)
+        public IActionResult IncidentReporting(IncidentTO incidentTO)
         {
             incidentTO.SubmitDate = DateTime.Now;
             

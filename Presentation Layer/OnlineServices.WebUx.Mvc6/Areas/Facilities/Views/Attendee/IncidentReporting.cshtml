@@ -1,4 +1,5 @@
-﻿@{
+﻿@model OnlineServices.WebUx.Mvc6.Areas.Facilities.Models.ExampleVM
+@{
     ViewData["Title"] = "Incident Reporting";
     ViewData["Subtitle"] = "Signalize technical incidents";
 }
@@ -19,54 +20,58 @@
     </script>
 }
 
+
+
 <form>
 
     <h1 class="MainTitle">Incident Form</h1>
-    <h2 class="Subtitle">Please, fill in the informations. We will be pleased to resolve the incident as soon as possible. </h2>
+    <h5 class="Subtitle">Please, fill in the informations. We will be pleased to resolve the incident as soon as possible. </h5>
 
-    <div>
-        Floor
-        <select class="Deroulant" required>
-            <option value="" disabled selected> Select the floor</option>
-            <option value="option">1</option>
-            <option value="option">-1</option>
-            <option value="option">-2</option>
-        </select>
-    </div>
+    <form action="/Facility/Attendee/IncidentReporting" method="post">
+        <div>
+            Floor
+            <select class="Deroulant" required name="Floor">
+                <option value="" disabled selected> Select the floor</option>
+                <option value="option">1</option>
+                <option value="option">-1</option>
+                <option value="option">-2</option>
+            </select>
+        </div>
 
-    <div>
-        Room
-        <select class="Deroulant" required>
-            <option value="" disabled selected> Select the room</option>
-            <option value="option">Room1</option>
-            <option value="option">Room2</option>
-            <option value="option">Room3</option>
-        </select>
-    </div>
+        <div>
+            Room
+            <select class="Deroulant" required name="Room">
+                <option value="" disabled selected> Select the room</option>
+                <option value="option">Room1</option>
+                <option value="option">Room2</option>
+                <option value="option">Room3</option>
+            </select>
+        </div>
 
-    <div>
-        Component
-        <select class="Deroulant" required>
-            <option value="" disabled selected> Select the component</option>
-            <option value="option">Component1</option>
-            <option value="option">Component2</option>
-            <option value="option">Component3</option>
-        </select>
-    </div>
+        <div>
+            Component
+            <select class="Deroulant" required name="Component">
+                <option value="" disabled selected> Select the component</option>
+                <option value="option">Component1</option>
+                <option value="option">Component2</option>
+                <option value="option">Component3</option>
+            </select>
+        </div>
 
-    <div>
-        Issue
-        <select class="Deroulant" required>
-            <option value="" disabled selected> Select the issue</option>
-            <option value="option">Issue1</option>
-            <option value="option">Issue2</option>
-            <option value="option">Issue3</option>
-        </select>
-    </div>
-    <div>
-        Description
-        <input placeholder="Please fill in with complementary informations if necessary (exact location, unlisted issue etc.)"
-               maxlength="280" size=80>
-    </div>
+        <div>
+            Issue
+            <select class="Deroulant" required name="Issue">
+                <option value="" disabled selected> Select the issue</option>
+                <option value="option">Issue1</option>
+                <option value="option">Issue2</option>
+                <option value="option">Issue3</option>
+            </select>
+        </div>
+        <div>
+            Description
+            <input name="Description" placeholder="Please fill in with complementary informations if necessary (exact location, unlisted issue etc.)"
+                   maxlength="280" size=80>
+        </div>
+    </form>
     <button class="waves-effect waves-light btn">Submit</button>
 </form>
