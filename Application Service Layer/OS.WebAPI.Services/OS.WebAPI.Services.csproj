@@ -17,7 +17,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\Application Layer\UserServices\UserServices.DataLayer\RegistrationServices.DataLayer.csproj" />
+    <ProjectReference Include="..\..\Application Layer\UserServices\UserServices.DataLayer\OS.RegistrationServices.DataLayer.csproj" />
     <ProjectReference Include="..\..\Cross-Cutting\OnlineServices.Common\OnlineServices.Common.csproj" />
     <ProjectReference Include="..\AttendanceServices\OS.AttendanceServices.BusinessLayer\OS.AttendanceServices.BusinessLayer.csproj" />
     <ProjectReference Include="..\AttendanceServices\OS.AttendanceServices.DataLayer\OS.AttendanceServices.DataLayer.csproj" />
