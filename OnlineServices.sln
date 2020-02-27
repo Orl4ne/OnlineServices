@@ -20,17 +20,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MS - MealServices", "MS - M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FS - FacilityServices", "FS - FacilityServices", "{0DDEE60A-8AE3-4255-9B3F-837F62049D4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacilityServices.BusinessLayer", "Application Layer\FacilityServices\FacilityServices.BusinessLayer\FacilityServices.BusinessLayer.csproj", "{9DC18D8C-D979-4680-84FE-D6FB55BC7C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.FacilityServices.BusinessLayer", "Application Layer\FacilityServices\FacilityServices.BusinessLayer\OS.FacilityServices.BusinessLayer.csproj", "{9DC18D8C-D979-4680-84FE-D6FB55BC7C63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Logic Layer", "Business Logic Layer", "{135D23C0-EC8E-45B5-8E48-D98B14A0F17E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacilityServices.BusinessLayerTests", "Application Layer\FacilityServices\FacilityServices.BusinessLayerTests\FacilityServices.BusinessLayerTests.csproj", "{D1AD10B5-310D-4877-ACC1-AF636E809D4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.FacilityServices.BusinessLayerTests", "Application Layer\FacilityServices\FacilityServices.BusinessLayerTests\OS.FacilityServices.BusinessLayerTests.csproj", "{D1AD10B5-310D-4877-ACC1-AF636E809D4A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{AEA097D8-4641-4D2E-919B-17DF2BE64BA6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacilityServices.DataLayer", "Application Layer\FacilityServices\FacilityServices.DataLayer\FacilityServices.DataLayer.csproj", "{3823F515-D90E-4F40-95F3-F62F5F61F225}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.FacilityServices.DataLayer", "Application Layer\FacilityServices\FacilityServices.DataLayer\OS.FacilityServices.DataLayer.csproj", "{3823F515-D90E-4F40-95F3-F62F5F61F225}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacilityServices.DataLayerTests", "Application Layer\FacilityServices\FacilityServices.DataLayerTests\FacilityServices.DataLayerTests.csproj", "{6B2475E4-C154-4A6B-A6F6-A1FE588929A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.FacilityServices.DataLayerTests", "Application Layer\FacilityServices\FacilityServices.DataLayerTests\OS.FacilityServices.DataLayerTests.csproj", "{6B2475E4-C154-4A6B-A6F6-A1FE588929A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RS - RegistrationServices", "RS - RegistrationServices", "{57DF89CB-51CE-4D34-B274-403296A15202}"
 EndProject
@@ -80,13 +80,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvaluationServices.Business
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvaluationServices.BusinessLayerTests", "Application Layer\EvaluationServices\EvaluationServices.BusinessLayerTests\EvaluationServices.BusinessLayerTests.csproj", "{2E7C16FB-842F-4313-8E50-519B95991C16}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistrationServices.DataLayer", "Application Layer\UserServices\UserServices.DataLayer\RegistrationServices.DataLayer.csproj", "{728B97AD-707F-4B88-9D0E-03A02007D12B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.RegistrationServices.DataLayer", "Application Layer\UserServices\UserServices.DataLayer\OS.RegistrationServices.DataLayer.csproj", "{728B97AD-707F-4B88-9D0E-03A02007D12B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistrationServices.DataLayerTests", "Application Layer\UserServices\UserServices.DataLayerTests\RegistrationServices.DataLayerTests.csproj", "{B6BC076E-D019-44A4-9B58-6965CA71C257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.RegistrationServices.DataLayerTests", "Application Layer\UserServices\UserServices.DataLayerTests\OS.RegistrationServices.DataLayerTests.csproj", "{B6BC076E-D019-44A4-9B58-6965CA71C257}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistrationServices.BusinessLayer", "Application Layer\UserServices\UserServices.BusinessLayer\RegistrationServices.BusinessLayer.csproj", "{C697680E-3244-448A-B099-1F19B05226AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.RegistrationServices.BusinessLayer", "Application Layer\UserServices\UserServices.BusinessLayer\OS.RegistrationServices.BusinessLayer.csproj", "{C697680E-3244-448A-B099-1F19B05226AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistrationServices.BusinessLayerTests", "Application Layer\UserServices\UserServices.BusinessLayerTests\RegistrationServices.BusinessLayerTests.csproj", "{7EEA7D74-D150-40F0-86AE-97D09F2F8A55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OS.RegistrationServices.BusinessLayerTests", "Application Layer\UserServices\UserServices.BusinessLayerTests\OS.RegistrationServices.BusinessLayerTests.csproj", "{7EEA7D74-D150-40F0-86AE-97D09F2F8A55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AS - AttendanceServices", "AS - AttendanceServices", "{710F6C71-92D3-44F3-B6AF-19A0F8E5395A}"
 EndProject

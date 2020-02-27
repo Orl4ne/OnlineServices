@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -14,9 +14,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Moq" Version="4.13.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
@@ -29,7 +26,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Cross-Cutting\OnlineServices.Common\OnlineServices.Common.csproj" />
-    <ProjectReference Include="..\UserServices.DataLayer\RegistrationServices.DataLayer.csproj" />
+    <ProjectReference Include="..\UserServices.BusinessLayer\OS.RegistrationServices.BusinessLayer.csproj" />
+    <ProjectReference Include="..\UserServices.DataLayer\OS.RegistrationServices.DataLayer.csproj" />
   </ItemGroup>
 
 </Project>
