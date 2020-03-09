@@ -1,8 +1,8 @@
 ﻿//VERIFYED V3
 using Moq;
-using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.Exceptions;
-using OnlineServices.Common.TranslationServices.TransfertObjects;
+using OS.Common.Enumerations;
+using OS.Common.Exceptions;
+using OS.Common.TranslationServices.TransfertObjects;
 using System;
 using System.Linq;
 using TranslationServices.BusinessLayer.UseCases;

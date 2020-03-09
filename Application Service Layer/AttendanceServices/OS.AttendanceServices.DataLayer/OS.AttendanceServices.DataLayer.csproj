@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyVersion>2002.25.1.1007</AssemblyVersion>
-    <FileVersion>2002.25.1.1007</FileVersion>
+    <AssemblyVersion>2003.9.6.1554</AssemblyVersion>
+    <FileVersion>2003.9.6.1554</FileVersion>
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject />
@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Cross-Cutting\OnlineServices.Common\OnlineServices.Common.csproj" />
+    <ProjectReference Include="..\..\..\Cross-Cutting\OS.Common\OS.Common.csproj" />
   </ItemGroup>
 
 </Project>

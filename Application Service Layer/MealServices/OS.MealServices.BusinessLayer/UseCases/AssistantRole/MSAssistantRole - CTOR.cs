@@ -1,5 +1,5 @@
-﻿using OnlineServices.Common.MealServices;
-using OnlineServices.Common.MealServices.Interfaces;
+﻿using OS.Common.MealServices;
+using OS.Common.MealServices.Interfaces;
 
 namespace OS.MealServices.BusinessLayer.UseCases
 {

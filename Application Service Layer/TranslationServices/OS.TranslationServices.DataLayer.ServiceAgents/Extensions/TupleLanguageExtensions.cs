@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.Exceptions;
-using OnlineServices.Common.Extensions;
-using OnlineServices.Common.TranslationServices.Extensions;
+using OS.Common.Enumerations;
+using OS.Common.Exceptions;
+using OS.Common.Extensions;
+using OS.Common.TranslationServices.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,8 +1,8 @@
 ﻿//using OS.MealServices.DataLayer.Entities;
 //using OS.MealServices.DataLayer.Repositories;
-//using OnlineServices.Common.DataAccessHelpers;
-//using OnlineServices.Common.MealServices.Interfaces;
-//using OnlineServices.Common.MealServices.TransfertObjects;
+//using OS.Common.DataAccessHelpers;
+//using OS.Common.MealServices.Interfaces;
+//using OS.Common.MealServices.TransfertObjects;
 
 //using System;
 

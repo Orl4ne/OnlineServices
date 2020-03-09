@@ -5,7 +5,7 @@ using System;
 using TranslationServices.DataLayer.ServiceAgents.Interfaces;
 using TranslationServices.DataLayer.ServiceAgents.TranslationAgents;
 using Xunit;
-using Language = OnlineServices.Common.Enumerations.Language;
+using Language = OS.Common.Enumerations.Language;
 
 namespace OS.TranslationServices.DataLayer.ServiceAgentsTests
 {

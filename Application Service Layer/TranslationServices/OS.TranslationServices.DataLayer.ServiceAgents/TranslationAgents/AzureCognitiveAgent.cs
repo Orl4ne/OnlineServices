@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using OnlineServices.Common.Exceptions;
-using OnlineServices.Common.Extensions;
-using OnlineServices.Common.TranslationServices.Extensions;
+using OS.Common.Exceptions;
+using OS.Common.Extensions;
+using OS.Common.TranslationServices.Extensions;
 using Serilog;
 
 using System;
@@ -15,7 +15,7 @@ using TranslationServices.DataLayer.ServiceAgents.Domain.AzureCognitive;
 using TranslationServices.DataLayer.ServiceAgents.Extensions;
 using TranslationServices.DataLayer.ServiceAgents.Interfaces;
 
-using Language = OnlineServices.Common.Enumerations.Language;
+using Language = OS.Common.Enumerations.Language;
 
 namespace TranslationServices.DataLayer.ServiceAgents.TranslationAgents
 {

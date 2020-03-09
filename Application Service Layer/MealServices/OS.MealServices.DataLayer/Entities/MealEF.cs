@@ -1,6 +1,6 @@
-﻿using OnlineServices.Common.DataAccessHelpers;
-using OnlineServices.Common.MealServices.Enumerations;
-using OnlineServices.Common.TranslationServices;
+﻿using OS.Common.DataAccessHelpers;
+using OS.Common.MealServices.Enumerations;
+using OS.Common.TranslationServices;
 
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

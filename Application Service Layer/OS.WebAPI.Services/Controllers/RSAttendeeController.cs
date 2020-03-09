@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OnlineServices.Common.AttendanceServices;
-using OnlineServices.Common.RegistrationServices;
-using OnlineServices.Common.RegistrationServices.TransferObject;
+using OS.Common.AttendanceServices;
+using OS.Common.RegistrationServices;
+using OS.Common.RegistrationServices.TransferObjects;
 
 namespace OS.WebAPI.Services.Controllers
 {

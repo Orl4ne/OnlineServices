@@ -1,11 +1,11 @@
 ﻿//VERIFIED V3
-using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.Exceptions;
-using OnlineServices.Common.Extensions;
-using OnlineServices.Common.SecurityServices.Extensions;
-using OnlineServices.Common.SecurityServices.TransfertObjects;
-using OnlineServices.Common.TranslationServices.Extensions;
-using OnlineServices.Common.TranslationServices.TransfertObjects;
+using OS.Common.Enumerations;
+using OS.Common.Exceptions;
+using OS.Common.Extensions;
+using OS.Common.SecurityServices.Extensions;
+using OS.Common.SecurityServices.TransfertObjects;
+using OS.Common.TranslationServices.Extensions;
+using OS.Common.TranslationServices.TransfertObjects;
 using System;
 using System.Linq;
 

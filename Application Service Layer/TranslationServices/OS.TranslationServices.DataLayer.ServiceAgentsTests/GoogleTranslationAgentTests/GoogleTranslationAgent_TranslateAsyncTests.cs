@@ -1,7 +1,7 @@
 ﻿//VERIFIED V3
 using Moq;
-using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Enumerations;
+using OS.Common.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

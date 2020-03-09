@@ -1,6 +1,6 @@
 ﻿//VERIFIED V3
-using OnlineServices.Common.Exceptions;
-using OnlineServices.Common.TranslationServices;
+using OS.Common.Exceptions;
+using OS.Common.TranslationServices;
 using Serilog;
 using System;
 using TranslationServices.DataLayer.ServiceAgents.Interfaces;

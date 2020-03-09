@@ -1,9 +1,9 @@
 using OS.AttendanceServices.DataLayer;
 using OS.AttendanceServices.DataLayer.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OnlineServices.Common.AttendanceServices.Interfaces;
-using OnlineServices.Common.AttendanceServices.TransfertObjects;
-using OnlineServices.Common.Extensions;
+using OS.Common.AttendanceServices.Interfaces;
+using OS.Common.AttendanceServices.TransfertObjects;
+using OS.Common.Extensions;
 using System;
 
 namespace AttendanceService.DataLayer.Tests

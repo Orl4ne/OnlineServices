@@ -1,5 +1,5 @@
 ﻿using Moq;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Exceptions;
 using System;
 using Xunit;
 using Serilog;
