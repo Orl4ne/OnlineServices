@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace TranslationServices.BusinessLayer.UseCases
 {
-    public partial class OnlineServicesRole
+    public partial class TRSInternalServicesRole
     {
         public MultiLanguageString GetTranslations(ServiceAuthorization APIKey, Tuple<Language, string> TupleToTranslate)
         {

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyVersion>2003.9.0.1554</AssemblyVersion>
-    <FileVersion>2003.9.0.1554</FileVersion>
+    <AssemblyVersion>2003.10.1.1116</AssemblyVersion>
+    <FileVersion>2003.10.1.1116</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +12,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="PowerShellStandard.Library" Version="5.1.0" />
     <PackageReference Include="Serilog" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Application Service Layer\TranslationServices\OS.TranslationServices.BusinessLayer\OS.TranslationServices.BusinessLayer.csproj" />
+    <ProjectReference Include="..\..\..\Application Service Layer\TranslationServices\OS.TranslationServices.DataLayer.ServiceAgents\OS.TranslationServices.DataLayer.ServiceAgents.csproj" />
   </ItemGroup>
 
 </Project>

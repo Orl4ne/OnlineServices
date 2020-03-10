@@ -7,12 +7,12 @@ using TranslationServices.DataLayer.ServiceAgents.Interfaces;
 
 namespace TranslationServices.BusinessLayer.UseCases
 {
-    public partial class OnlineServicesRole : ITRSOnlineServicesRole
+    public partial class TRSInternalServicesRole : ITRSInternalServicesRole
     {
         private readonly ILogger iLogger;
         private readonly ITRSTranslationService Translator;
 
-        public OnlineServicesRole(ILogger logger, ITRSTranslationService Translator)
+        public TRSInternalServicesRole(ILogger logger, ITRSTranslationService Translator)
         {
             this.iLogger = logger ?? throw new LoggedException(new ArgumentNullException($"logger should not be null. {nameof(logger)} @ CTOR in OnlineServicesSystem"));
 
