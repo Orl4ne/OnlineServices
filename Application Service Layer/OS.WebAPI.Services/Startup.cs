@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using OS.AttendanceServices.BusinessLayer.UseCases;
-using OS.AttendanceServices.DataLayer;
-using OS.AttendanceServices.DataLayer.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,11 +13,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using OnlineServices.Common.AttendanceServices.Interfaces;
-using OnlineServices.Common.AttendanceServices;
-using OnlineServices.Common.RegistrationServices;
+using OS.Common.AttendanceServices.Interfaces;
+using OS.Common.AttendanceServices;
+using OS.Common.RegistrationServices;
 using OS.WebAPI.Services.Mocks;
-using RegistrationServices.DataLayer;
+using OS.RegistrationServices.DataLayer;
+using OS.WebAPI.Services.Features.Authentication;
+using OS.WebAPI.Services.Features.Authorization;
+using Microsoft.AspNetCore.Authorization;
+using System.Text.Json;
 
 namespace OS.WebAPI.Services
 {
@@ -35,11 +37,38 @@ namespace OS.WebAPI.Services
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRouting(options => options.LowercaseUrls = true);
+
             services.AddControllers(setupAction =>
             {
                 setupAction.ReturnHttpNotAcceptable = true;
-            }).AddXmlDataContractSerializerFormatters();
-            
+            })
+                .AddXmlDataContractSerializerFormatters()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                    options.JsonSerializerOptions.IgnoreNullValues = true;
+                });
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = ApiKeyAuthenticationOptions.DefaultScheme;
+                options.DefaultChallengeScheme = ApiKeyAuthenticationOptions.DefaultScheme;
+            })
+                .AddApiKeySupport(options => { });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(Policies.OnlyEmployees, policy => policy.Requirements.Add(new OnlyEmployeesRequirement()));
+                options.AddPolicy(Policies.OnlyManagers, policy => policy.Requirements.Add(new OnlyManagersRequirement()));
+                options.AddPolicy(Policies.OnlyThirdParties, policy => policy.Requirements.Add(new OnlyThirdPartiesRequirement()));
+            });
+
+            services.AddSingleton<IAuthorizationHandler, OnlyEmployeesAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, OnlyManagersAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, OnlyThirdPartiesAuthorizationHandler>();
+
+
             RegistrationServicesDependencyInjections(services);
             AttendanceServicesDependencyInjections(services);
         }
@@ -48,8 +77,9 @@ namespace OS.WebAPI.Services
         {
             services.AddDbContext<RegistrationContext>(optionsBuilder =>
                 optionsBuilder
-                    .UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=RegistrationDB;Trusted_Connection=True;")
-                );
+                    //.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=RegistrationDB;Trusted_Connection=True;")
+                    .UseInMemoryDatabase(databaseName: "RegistrationDB")
+            );
 
             //Mocks to implement...
             services.AddTransient<IRSAssistantRole>(x => RegistrationServicesMockHelper.RSAssistantRoleObject());
@@ -63,7 +93,7 @@ namespace OS.WebAPI.Services
         {
             //Mocks to implement...
             services.AddTransient<ICheckInRepository>(x => AttendenceServicesMockHelper.CheckInRepositoryObject());
-            
+
             //Implementations
             //services.AddTransient<IASUnitOfWork, ASUnitOfWork>();
             services.AddTransient<IASAttendeeRole, ASAttendeeRole>();

@@ -3,9 +3,9 @@
 //using OS.MealServices.DataLayer.Repositories;
 //using Microsoft.EntityFrameworkCore;
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
-//using OnlineServices.Common.DataAccessHelpers;
-//using OnlineServices.Common.MealServices.TransfertObjects;
-//using OnlineServices.Common.TranslationServices.TransfertObjects;
+//using OS.Common.DataAccessHelpers;
+//using OS.Common.MealServices.TransfertObjects;
+//using OS.Common.TranslationServices.TransfertObjects;
 //using System;
 //using System.Collections.Generic;
 //using System.Linq;

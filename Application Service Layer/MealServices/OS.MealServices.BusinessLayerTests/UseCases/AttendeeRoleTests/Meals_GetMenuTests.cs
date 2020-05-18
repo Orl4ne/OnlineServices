@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using OnlineServices.Common.MealServices.Interfaces;
-using OnlineServices.Common.Enumerations;
+using OS.Common.MealServices.Interfaces;
+using OS.Common.Enumerations;
 using System.Linq;
 using OS.MealServices.BusinessLayer.Extensions;
-using OnlineServices.Common.MealServices.TransfertObjects;
+using OS.Common.MealServices.TransfertObjects;
 using OS.MealServices.BusinessLayerTests;
 
 namespace OS.MealServices.BusinessLayer.UseCases.AttendeeRoleTests

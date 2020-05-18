@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using OnlineServices.Common.RegistrationServices;
+using OS.Common.RegistrationServices;
 using Moq;
-using OnlineServices.Common.RegistrationServices.TransferObject;
-using OnlineServices.Common.RegistrationServices.Enumerations;
+using OS.Common.RegistrationServices.TransferObjects;
+using OS.Common.RegistrationServices.Enumerations;
 
 namespace OS.WebAPI.Services.Mocks
 {
@@ -13,9 +13,9 @@ namespace OS.WebAPI.Services.Mocks
     {
         public static IRSAssistantRole RSAssistantRoleObject()
         {
-            var userServicesMOCK = new Mock<IRSAssistantRole>();
+            var RegistrationServicesMOCK = new Mock<IRSAssistantRole>();
 
-            userServicesMOCK.Setup(marge => marge.GetUsersBySession(It.IsAny<int>()))
+            RegistrationServicesMOCK.Setup(marge => marge.GetUsersBySession(It.IsAny<int>()))
                         .Returns(new List<UserTO> {
                             new UserTO { Id = 1}
                             , new UserTO { Id =2}
@@ -23,7 +23,7 @@ namespace OS.WebAPI.Services.Mocks
                             , new UserTO { Id =4}
                         });
 
-            userServicesMOCK.Setup(marge => marge.GetSessionById(It.IsAny<int>()))
+            RegistrationServicesMOCK.Setup(marge => marge.GetSessionById(It.IsAny<int>()))
                 .Returns(new SessionTO
                 {
                     Id = 12,
@@ -36,17 +36,17 @@ namespace OS.WebAPI.Services.Mocks
                     }
                 });
 
-            return userServicesMOCK.Object;
+            return RegistrationServicesMOCK.Object;
         }
 
         public static IRSAttendeeRole RSAttendeeRoleObject()
         {
-            var userServicesMOCK = new Mock<IRSAttendeeRole>();
+            var RegistrationServicesMOCK = new Mock<IRSAttendeeRole>();
 
-            userServicesMOCK.Setup(marge => marge.GetIdByMail(It.IsAny<string>()))
+            RegistrationServicesMOCK.Setup(marge => marge.GetIdByMail(It.IsAny<string>()))
                         .Returns(1);
 
-            userServicesMOCK.Setup(marge => marge.GetSessionByUserByDate(It.IsAny<int>(), It.IsAny<DateTime>()))
+            RegistrationServicesMOCK.Setup(marge => marge.GetSessionByUserByDate(It.IsAny<int>(), It.IsAny<DateTime>()))
                 .Returns(new SessionTO
                 {
                     Id = 12,
@@ -59,7 +59,7 @@ namespace OS.WebAPI.Services.Mocks
                     }
                 });
 
-            return userServicesMOCK.Object;
+            return RegistrationServicesMOCK.Object;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿//VERIFIED V3
 using Moq;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;

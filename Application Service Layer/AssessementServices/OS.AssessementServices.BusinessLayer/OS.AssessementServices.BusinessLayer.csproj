@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyVersion>2003.9.2.1558</AssemblyVersion>
+    <FileVersion>2003.9.2.1558</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Cross-Cutting\OS.Common\OS.Common.csproj" />
+    <ProjectReference Include="..\OS.AssessementServices.DataLayer\OS.AssessementServices.DataLayer.csproj" />
+  </ItemGroup>
+
+</Project>

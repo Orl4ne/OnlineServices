@@ -1,7 +1,7 @@
 ﻿using OS.MealServices.DataLayer.Entities;
 
-using OnlineServices.Common.Extensions;
-using OnlineServices.Common.MealServices.TransfertObjects;
+using OS.Common.Extensions;
+using OS.Common.MealServices.TransfertObjects;
 
 using System;
 using System.Collections.Generic;

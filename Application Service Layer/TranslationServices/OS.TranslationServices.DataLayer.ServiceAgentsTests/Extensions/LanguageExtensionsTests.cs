@@ -1,6 +1,6 @@
 ﻿//VERIFIED V3
-using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Enumerations;
+using OS.Common.Exceptions;
 using TranslationServices.DataLayer.ServiceAgents.Extensions;
 using Xunit;
 

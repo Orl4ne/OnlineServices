@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using OnlineServices.Common.RegistrationServices;
+using OS.Common.RegistrationServices;
 using Moq;
-using OnlineServices.Common.RegistrationServices.TransferObject;
-using OnlineServices.Common.RegistrationServices.Enumerations;
-using OnlineServices.Common.AttendanceServices.Interfaces;
-using OnlineServices.Common.AttendanceServices.TransfertObjects;
-using OnlineServices.Common.AttendanceServices.Interfaces;
+using OS.Common.RegistrationServices.TransferObjects;
+using OS.Common.RegistrationServices.Enumerations;
+using OS.Common.AttendanceServices.Interfaces;
+using OS.Common.AttendanceServices.TransfertObjects;
+using OS.Common.AttendanceServices.Interfaces;
 
 namespace OS.WebAPI.Services.Mocks
 {

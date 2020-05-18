@@ -1,4 +1,4 @@
-﻿using OnlineServices.Common.Enumerations;
+﻿using OS.Common.Enumerations;
 using System;
 using System.Collections.Generic;
 using System.Text;

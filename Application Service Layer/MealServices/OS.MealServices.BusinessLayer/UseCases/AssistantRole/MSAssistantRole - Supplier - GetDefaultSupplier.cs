@@ -1,6 +1,6 @@
 ﻿using OS.MealServices.BusinessLayer.Extensions;
 
-using OnlineServices.Common.MealServices.TransfertObjects;
+using OS.Common.MealServices.TransfertObjects;
 
 using System;
 using System.Linq;

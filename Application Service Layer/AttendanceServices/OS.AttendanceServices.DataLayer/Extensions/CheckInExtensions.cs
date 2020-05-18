@@ -1,5 +1,5 @@
 ﻿using OS.AttendanceServices.DataLayer.Entities;
-using OnlineServices.Common.AttendanceServices.TransfertObjects;
+using OS.Common.AttendanceServices.TransfertObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;

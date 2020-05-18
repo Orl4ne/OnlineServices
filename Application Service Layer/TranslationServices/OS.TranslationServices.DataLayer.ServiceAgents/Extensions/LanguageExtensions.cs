@@ -1,8 +1,8 @@
 ﻿//VERIFIED V3
 using Google.Cloud.Translation.V2;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Exceptions;
 
-using Language = OnlineServices.Common.Enumerations.Language;
+using Language = OS.Common.Enumerations.Language;
 
 namespace TranslationServices.DataLayer.ServiceAgents.Extensions
 {

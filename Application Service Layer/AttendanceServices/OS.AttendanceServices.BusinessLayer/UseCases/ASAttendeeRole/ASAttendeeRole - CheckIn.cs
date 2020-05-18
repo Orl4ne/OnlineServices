@@ -1,8 +1,8 @@
 ﻿using OS.AttendanceServices.BusinessLayer.Domain;
-using OnlineServices.Common.AttendanceServices;
-using OnlineServices.Common.AttendanceServices.TransfertObjects;
-using OnlineServices.Common.Extensions;
-using OnlineServices.Common.RegistrationServices.TransferObject;
+using OS.Common.AttendanceServices;
+using OS.Common.AttendanceServices.TransfertObjects;
+using OS.Common.Extensions;
+using OS.Common.RegistrationServices.TransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +17,9 @@ namespace OS.AttendanceServices.BusinessLayer.UseCases
             if (checkInArgs is null)
                 throw new ArgumentNullException(nameof(checkInArgs));
 
-            if (!userServices.GetUsersBySession(checkInArgs.SessionId).Any(x => x.Id == checkInArgs.AttendeeId))
+            if (!RegistrationServices.GetUsersBySession(checkInArgs.SessionId).Any(x => x.Id == checkInArgs.AttendeeId))
                 throw new Exception("Attendee do not exist in formation");
-            if (!userServices.GetSessionById(checkInArgs.SessionId).SessionDays.Any(x => x.Date.IsSameDate(DateTime.Now)))
+            if (!RegistrationServices.GetSessionById(checkInArgs.SessionId).SessionDays.Any(x => x.Date.IsSameDate(DateTime.Now)))
                 throw new Exception("This session is not held today.");
             if (!checkInArgs.CheckInTime.IsSameDate(DateTime.Now))
                 throw new Exception("Attendee is not allowed to check-in other day than the current one.");

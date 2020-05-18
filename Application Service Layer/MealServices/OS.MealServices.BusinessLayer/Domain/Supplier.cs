@@ -1,4 +1,4 @@
-﻿using OnlineServices.Common.Extensions;
+﻿using OS.Common.Extensions;
 
 namespace OS.MealServices.BusinessLayer.Domain
 {

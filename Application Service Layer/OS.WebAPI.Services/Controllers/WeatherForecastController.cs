@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OS.WebAPI.Services.Features.Authorization;
 
 namespace OS.WebAPI.Services.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Produces("application/json")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -24,6 +27,7 @@ namespace OS.WebAPI.Services.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = Policies.OnlyEmployees)]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

@@ -6,9 +6,9 @@ using OS.AttendanceServices.BusinessLayer.UseCases;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OnlineServices.Common.AttendanceServices;
-using OnlineServices.Common.AttendanceServices.TransfertObjects;
-using OnlineServices.Common.RegistrationServices.TransferObject;
+using OS.Common.AttendanceServices;
+using OS.Common.AttendanceServices.TransfertObjects;
+using OS.Common.RegistrationServices.TransferObjects;
 
 namespace OS.WebAPI.Services.Controllers
 {

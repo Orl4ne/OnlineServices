@@ -1,6 +1,6 @@
-﻿using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.MealServices.Enumerations;
-using OnlineServices.Common.TranslationServices.TransfertObjects;
+﻿using OS.Common.Enumerations;
+using OS.Common.MealServices.Enumerations;
+using OS.Common.TranslationServices.TransfertObjects;
 
 using System;
 using System.Collections.Generic;

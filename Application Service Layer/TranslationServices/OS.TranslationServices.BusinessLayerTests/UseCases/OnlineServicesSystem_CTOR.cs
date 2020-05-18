@@ -1,6 +1,6 @@
 ﻿//VERIFIED V3
 using Moq;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Exceptions;
 using Serilog;
 using System;
 using TranslationServices.BusinessLayer.UseCases;
@@ -17,7 +17,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockILogger = new Mock<ILogger>();
             var mockITRSTranslationService = new Mock<ITRSTranslationService>();
 
-            var sut = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var sut = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             
             Assert.NotNull(sut);
             mockILogger.Verify(x=>x.Error(It.IsAny<string>()), Times.Never);
@@ -32,7 +32,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockILogger = TestHelper.MakeILogger();
             LoggedException.Logger = mockILogger.Object;
 
-            Assert.Throws<LoggedException>(() => new OnlineServicesRole(iLogger, iTRSTranslationService));
+            Assert.Throws<LoggedException>(() => new TRSInternalServicesRole(iLogger, iTRSTranslationService));
             mockILogger.Verify(x => x.Error(It.IsAny<ArgumentNullException>(), It.IsAny<string>()), Times.Once);
             //TODO Times.Twice?
         }
@@ -46,7 +46,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
 
             var mockITRSTranslationService = new Mock<ITRSTranslationService>();
 
-            Assert.Throws<LoggedException>(() => new OnlineServicesRole(iLogger, mockITRSTranslationService.Object));
+            Assert.Throws<LoggedException>(() => new TRSInternalServicesRole(iLogger, mockITRSTranslationService.Object));
             mockILogger.Verify(x => x.Error(It.IsAny<ArgumentNullException>(), It.IsAny<string>()), Times.Once);
         }
 
@@ -58,7 +58,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
 
             ITRSTranslationService iTRSTranslationService = null;
 
-            Assert.Throws<LoggedException>(() => new OnlineServicesRole(mockILogger.Object, iTRSTranslationService));
+            Assert.Throws<LoggedException>(() => new TRSInternalServicesRole(mockILogger.Object, iTRSTranslationService));
             mockILogger.Verify(x=>x.Error(It.IsAny<ArgumentNullException>(), It.IsAny<string>()), Times.Once);
         }
     }

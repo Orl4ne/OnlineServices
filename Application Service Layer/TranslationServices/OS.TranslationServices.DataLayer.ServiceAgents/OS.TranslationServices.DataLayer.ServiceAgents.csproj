@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyVersion>2020.0211.0531.1331</AssemblyVersion>
-    <FileVersion>2020.0211.0531.1331</FileVersion>
+    <AssemblyVersion>2003.10.0.1116</AssemblyVersion>
+    <FileVersion>2003.10.0.1116</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Cross-Cutting\OnlineServices.Common\OnlineServices.Common.csproj" />
+    <ProjectReference Include="..\..\..\Cross-Cutting\OS.Common\OS.Common.csproj" />
   </ItemGroup>
 
 </Project>

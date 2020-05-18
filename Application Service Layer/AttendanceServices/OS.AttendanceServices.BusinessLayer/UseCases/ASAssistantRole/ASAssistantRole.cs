@@ -1,7 +1,7 @@
 ﻿//using OS.AttendanceServices.DataLayer;
-//using OnlineServices.Common.AttendanceServices;
-//using OnlineServices.Common.AttendanceServices.TransfertObjects;
-//using OnlineServices.Common.RegistrationServices;
+//using OS.Common.AttendanceServices;
+//using OS.Common.AttendanceServices.TransfertObjects;
+//using OS.Common.RegistrationServices;
 
 //using System;
 //using System.Collections.Generic;

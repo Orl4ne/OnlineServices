@@ -2,8 +2,8 @@
 //using OS.MealServices.DataLayer.Extensions;
 
 //using Microsoft.EntityFrameworkCore;
-//using OnlineServices.Common.DataAccessHelpers;
-//using OnlineServices.Common.MealServices.TransfertObjects;
+//using OS.Common.DataAccessHelpers;
+//using OS.Common.MealServices.TransfertObjects;
 
 //using System;
 //using System.Collections.Generic;

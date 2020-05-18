@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OS.MealServices.BusinessLayer.Domain;
-using OnlineServices.Common.TranslationServices.TransfertObjects;
-using OnlineServices.Common.Exceptions;
+using OS.Common.TranslationServices.TransfertObjects;
+using OS.Common.Exceptions;
 
 namespace OS.MealServices.BusinessLayer.DomainTests
 {

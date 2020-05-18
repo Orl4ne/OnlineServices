@@ -1,6 +1,6 @@
 ﻿using Moq;
-using OnlineServices.Common.Enumerations;
-using OnlineServices.Common.Exceptions;
+using OS.Common.Enumerations;
+using OS.Common.Exceptions;
 using System;
 using System.Linq;
 using TranslationServices.BusinessLayer.UseCases;
@@ -18,7 +18,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var EnglishTupleToTranslate = new Tuple<Language, string>(Language.English, "English Source String");
 
             //ACT
@@ -42,7 +42,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var FrenchTupleToTranslate = new Tuple<Language, string>(Language.French, "French Source String");
 
             //ACT
@@ -66,7 +66,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var DutchTupleToTranslate = new Tuple<Language, string>(Language.Dutch, "Dutch Source String");
 
             //ACT
@@ -90,7 +90,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var DutchTupleToTranslate = new Tuple<Language, string>(Language.Dutch, "Dutch Source String");
 
             //ACT & ASSERT
@@ -107,7 +107,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var TupleToTranslate = new Tuple<Language, string>(Language.French, null);
 
             //ACT & ASSERT
@@ -124,7 +124,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var TupleToTranslate = new Tuple<Language, string>(Language.Dutch, "  ");
 
             //ACT & ASSERT
@@ -141,7 +141,7 @@ namespace OS.TranslationServices.BusinessLayerTests.UseCases
             var mockITRSTranslationService = TestHelper.MakeITRSTranslationService();
             LoggedException.Logger = mockILogger.Object;
 
-            var translationUC = new OnlineServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
+            var translationUC = new TRSInternalServicesRole(mockILogger.Object, mockITRSTranslationService.Object);
             var TupleToTranslate = new Tuple<Language, string>((Language)50, "Dutch Source String");
 
             //ACT & ASSERT

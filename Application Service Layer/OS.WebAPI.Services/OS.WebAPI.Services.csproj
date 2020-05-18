@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyVersion>2002.25.1.1007</AssemblyVersion>
-    <FileVersion>2002.25.1.1007</FileVersion>
+    <AssemblyVersion>2003.9.12.1554</AssemblyVersion>
+    <FileVersion>2003.9.12.1554</FileVersion>
+    <AssemblyName>OS.WebAPI.Services</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,15 +13,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
     <PackageReference Include="Moq" Version="4.13.1" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\Application Layer\UserServices\UserServices.DataLayer\OS.RegistrationServices.DataLayer.csproj" />
-    <ProjectReference Include="..\..\Cross-Cutting\OnlineServices.Common\OnlineServices.Common.csproj" />
+    <ProjectReference Include="..\..\Cross-Cutting\OS.Common\OS.Common.csproj" />
     <ProjectReference Include="..\AttendanceServices\OS.AttendanceServices.BusinessLayer\OS.AttendanceServices.BusinessLayer.csproj" />
-    <ProjectReference Include="..\AttendanceServices\OS.AttendanceServices.DataLayer\OS.AttendanceServices.DataLayer.csproj" />
+    <ProjectReference Include="..\RegistrationServices\OS.RegistrationServices.BusinessLayer\OS.RegistrationServices.BusinessLayer.csproj" />
+    <ProjectReference Include="..\RegistrationServices\OS.RegistrationServices.DataLayer\OS.RegistrationServices.DataLayer.csproj" />
   </ItemGroup>
 
 

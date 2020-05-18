@@ -3,11 +3,11 @@ using OS.AttendanceServices.DataLayer.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Moq;
-using OnlineServices.Common.AttendanceServices.Interfaces;
-using OnlineServices.Common.AttendanceServices.TransfertObjects;
-using OnlineServices.Common.RegistrationServices;
-using OnlineServices.Common.RegistrationServices.Enumerations;
-using OnlineServices.Common.RegistrationServices.TransferObject;
+using OS.Common.AttendanceServices.Interfaces;
+using OS.Common.AttendanceServices.TransfertObjects;
+using OS.Common.RegistrationServices;
+using OS.Common.RegistrationServices.Enumerations;
+using OS.Common.RegistrationServices.TransferObjects;
 
 using System;
 using System.Collections.Generic;
@@ -22,15 +22,15 @@ namespace OS.AttendanceServices.BusinessLayer.Tests
         {
             var checkInRepository = new CheckInRepository(new AzureStorageCredentials());
 
-            var userServicesMOCK = new Mock<IRSAssistantRole>();
-            userServicesMOCK.Setup(marge => marge.GetUsersBySession(It.IsAny<int>()))
+            var RegistrationServicesMOCK = new Mock<IRSAssistantRole>();
+            RegistrationServicesMOCK.Setup(marge => marge.GetUsersBySession(It.IsAny<int>()))
                 .Returns(new List<UserTO> {
                     new UserTO { Id = 1 }
                     , new UserTO { Id =2 }
                     , new UserTO { Id =3}
                     , new UserTO { Id =4}
                 });
-            userServicesMOCK.Setup(marge => marge.GetSessionById(It.IsAny<int>()))
+            RegistrationServicesMOCK.Setup(marge => marge.GetSessionById(It.IsAny<int>()))
                 .Returns(new SessionTO
                 {
                     Id = 999999999,
@@ -50,7 +50,7 @@ namespace OS.AttendanceServices.BusinessLayer.Tests
                 CheckInTime = DateTime.Now
             };
 
-            var eleve = new ASAttendeeRole(checkInRepository, userServicesMOCK.Object);
+            var eleve = new ASAttendeeRole(checkInRepository, RegistrationServicesMOCK.Object);
             var valueToAssert = eleve.CheckIn(checkInArgs);
             Assert.IsTrue(valueToAssert);
         }
